@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document><Folder><name>tranviaparadas</name>
+<Schema name="tranviaparadas" id="tranviaparadas">
+	<SimpleField name="Name" type="string"></SimpleField>
+	<SimpleField name="Description" type="string"></SimpleField>
+	<SimpleField name="DENOMINACION" type="string"></SimpleField>
+	<SimpleField name="LINEA" type="float"></SimpleField>
+</Schema>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada La Trinidad</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.316426089421434,28.485840447584984</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Padre Anchieta</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.317750587945739,28.482410761596721</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Cruz de Piedra</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.312318020907494,28.4796455315144</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Museo de la Ciencia</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.309257031929626,28.476395205679243</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Gracia</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.305438386019571,28.473359087293989</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Campus Guajara</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.302205011638328,28.468793659946321</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Las Mantecas</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.296912448560501,28.463575978578504</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Hospital Universitario</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.292718180457914,28.457567530165989</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada El Cardonal</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.293778709766325,28.451669502596619</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Taco</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.29540653176765,28.44690113995372</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Hospital La Candelaria</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.286964527303123,28.449040831429421</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Príncipes de España</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.285112624781405,28.453139397179321</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Chimisay</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.281108736088573,28.457374537129418</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Conservatorio</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.277857010936351,28.462097842494625</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Cruz del Señor</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.272030332705469,28.464345613134999</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Puente Zurita</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.264936768087193,28.467737581005537</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada La Paz</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.260638836500412,28.467773476108999</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Weyler</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.255854487209344,28.467362502995137</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Guimerá</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.251664180968618,28.466324206843872</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Fundación</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.248209389626211,28.464536260887112</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Intercambiador</SimpleData>
+		<SimpleData name="LINEA">1</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.251008249603764,28.458995517488219</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Tincer</SimpleData>
+		<SimpleData name="LINEA">2</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.304590260335022,28.443765077004443</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada San Jerónimo</SimpleData>
+		<SimpleData name="LINEA">2</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.298136021935608,28.447879294432092</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada Ingenieros</SimpleData>
+		<SimpleData name="LINEA">2</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.291042208954906,28.462356573028419</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#tranviaparadas">
+		<SimpleData name="DENOMINACION">TRANVÍA parada La Cuesta</SimpleData>
+		<SimpleData name="LINEA">2</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-16.286015251968092,28.467080399470159</coordinates></Point>
+  </Placemark>
+</Folder></Document></kml>

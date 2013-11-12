@@ -57,17 +57,6 @@ if(isset($_POST['query'])){
 		$data = $USER_ACTIVE->get_profile();
 		echo $data;
 	}
-	if($_GET['tokens'] == 'vidaliapp'){
-		echo json_encode('vdl_utoken:'.md5('token_example')."-".crypt("public_key"));
-	}
 }
 
-print_r($_REQUEST,1);
-
-$text = print_r($_REQUEST,1);
- // open log file
-$filename = "input.log";
-$fh = fopen($filename, "a") or die("Could not open log file.");
-fwrite($fh, date("d-m-Y, H:i")." - $text\n") or die("Could not write file!");
-fclose($fh);
 ?>

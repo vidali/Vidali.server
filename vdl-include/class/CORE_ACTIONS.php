@@ -218,20 +218,15 @@ class CORE_ACTIONS extends CORE_MAIN{
    * @return void
    * @access public
    */
-	public function login($_USER,$_PASS,$_REM){
+	public function login($_USER,$_PASS){
 		//Iniciamos sesion y conectamos a la base de datos
 		$connection = parent::connect();
 		//Extraemos el user y la pass
 		$usr = $_USER;
-		if($_REM == 2){
-			$pwd = $_PASS;
-		}
-		else
-			$pwd = mysqli_real_escape_string($connection,sha1(md5(trim($_PASS))));
+		$pwd = mysqli_real_escape_string($connection,sha1(md5(trim($_PASS))));
 		$query = sprintf("SELECT *
 						  FROM vdl_user 
 						  WHERE vdl_user.email='%s' && vdl_user.password = '%s'", $usr,$pwd);
-						  //LO DEJAMOS AQUI
 		$result= $connection->query($query);
 		//DEPURACION
 		 if (!$result) {
@@ -242,8 +237,7 @@ class CORE_ACTIONS extends CORE_MAIN{
 		}
 		if($result->num_rows){
 			// nos devuelve 1 si encontro el usuario y el password
-            session_start();
-			$array= $result->fetch_array();
+			/*$array= $result->fetch_array();
 			//generamos id de la sesion
 			$s_id = session_id();
 			$query = sprintf("UPDATE  vdl_user SET  `session_id` =  '%s' WHERE  `vdl_user`.`id` =%s;",$s_id,$array["id"]);
@@ -263,7 +257,7 @@ class CORE_ACTIONS extends CORE_MAIN{
 			if ($_REM == 1){
 				setcookie ('nick_c', $usr, time() + (86400 *  365),'/');
 				setcookie ('pass_c', $pwd, time() + (86400 *  365),'/');
-			}
+			}*/
 			return true;
 		}
 		else{

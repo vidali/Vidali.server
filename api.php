@@ -21,7 +21,20 @@ $app->post('/login/', 'doLogin');
 $app->run();
  
 function getTokens() {
-	echo json_encode('token:1,token:2');
+	//echo json_encode('token:1,token:2');
+	//Recuperamos datos del usuario
+		$USER = new USER("test@test.com");
+		$datos = $USER->firstLoad();
+		
+		//Generamos token de sesion
+		$TOKEN = new TOKEN();
+		$token = $TOKEN->gen_token("test@test.com", "192.168.1.33");
+		
+		//Añadimos el token al array asociativo que vamos a devolver
+		$datos["token"] = $token;
+		
+		//$auth_session = array("session_auth" => "test");
+		echo json_encode($datos);
 }
  
 function getToken($id) {
@@ -32,11 +45,22 @@ function getToken($id) {
 }
 
 function doLogin() {
-	$ACTIONS = new CORE_ACTIONS();
-	$sucess= $ACTIONS->login($_POST['email'], $_POST['password']);
+	$LOGIN = new LOGIN();
+	$sucess= $LOGIN->login($_POST['email'], $_POST['password']);
 	if($sucess == true){
-		$auth_session = array("session_auth" => "test");
-		echo json_encode($auth_session);
+		//Recuperamos datos del usuario
+		$USER = new USER($_POST['email']);
+		$datos = $USER->firstLoad();
+		
+		//Generamos token de sesion
+		$TOKEN = new TOKEN();
+		$token = $TOKEN->gen_token($_POST['email'], $_POST['ip']);
+		
+		//Añadimos el token al array asociativo que vamos a devolver
+		$datos["token"] = $token;
+		
+		//$auth_session = array("session_auth" => "test");
+		echo json_encode($datos);
 	}
 
 }

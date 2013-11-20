@@ -6,7 +6,7 @@ require_once 'CORE_MAIN.php';
  * class USER
  * 
  */
-abstract class USER extends CORE_MAIN
+class USER extends CORE_MAIN
 {
 
   /** Aggregations: */
@@ -133,7 +133,7 @@ abstract class USER extends CORE_MAIN
 									vdl_user.n_views,
 									vdl_user.n_groups,
 									vdl_user.n_contacts
-						FROM vdl_user WHERE vdl_user.nick='%s'", $user);
+						FROM vdl_user WHERE vdl_user.email='%s'", $user);
 		$result= $connection->query($query);
 		if (!$result) {
 			$message  = 'Invalid query: ' . mysql_error() . "\n";
@@ -161,6 +161,22 @@ abstract class USER extends CORE_MAIN
 
 	} // end of member function __construct
 
+	
+  /**
+   * 
+   *
+   *  
+
+   * @return void
+   * @access public
+   */
+  public function firstLoad() {
+  	$datos = array("nick" => $this->_nickname, "name" => $this->_name, "age" => $this->_age, "description" => $this->_bio, "location" => $this->_location);
+  	return $datos;
+  } // end of member function firstLoad
+		
+	
+	
   /**
    * 
    *

@@ -63,6 +63,29 @@ class TOKEN extends CORE_MAIN{
 			return true;
 		}
 	}
+	
+	public function getEmailfromToken($token){
+		$connection = parent::connect();
+		 
+		 $query = ("SELECT vdl_token.email
+		 			FROM `vdl_token` 
+		 			WHERE `token` LIKE '$token'");
+				   
+		$result = $connection->query($query);
+		$arresult=array();
+		if (!$result) {
+			$message  = 'Invalid query: ' . mysql_error() . "\n";
+			$message = $message . ' Whole query: ' . $query;
+			die($message);
+			return false;
+		}
+		else{
+			while ($row = $result->fetch_array()) {
+				array_push($arresult,$row[0]);
+			}
+			return $arresult[0];
+		}
+	}
 	  
  
 	public function gen_token($_USER,$ip){

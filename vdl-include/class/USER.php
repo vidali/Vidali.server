@@ -171,7 +171,7 @@ class USER extends CORE_MAIN
    * @access public
    */
   public function firstLoad() {
-  	$datos = array("nick" => $this->_nickname, "name" => $this->_name, "age" => $this->_age, "description" => $this->_bio, "location" => $this->_location);
+  	$datos = array("nick" => $this->_nickname, "email" => $this->_email, "name" => $this->_name, "age" => $this->_age, "description" => $this->_bio, "location" => $this->_location);
   	return $datos;
   } // end of member function firstLoad
 		
@@ -188,6 +188,36 @@ class USER extends CORE_MAIN
   public function get_nick( $_id_user ) {
   } // end of member function get_nick
 
+  /**
+   * 
+   *
+   * @param mixed _id_user 
+
+   * @return int
+   * @access public
+   */
+  public function get_id( $user ) {
+  	$connection = parent::connect();
+	$query = ("SELECT vdl_user.id
+	 			FROM `vdl_user` 
+	 			WHERE `email` LIKE '$user' OR `nick` LIKE '$user'");
+			   
+	$result = $connection->query($query);
+	$arresult=array();
+	if (!$result) {
+		$message  = 'Invalid query: ' . mysql_error() . "\n";
+		$message = $message . ' Whole query: ' . $query;
+		die($message);
+		return false;
+	}
+	else{
+		while ($row = $result->fetch_array()) {
+			array_push($arresult,$row[0]);
+		}
+		return $arresult[0];
+	}
+  } // end of member function get_id
+  
   /**
    * 
    *

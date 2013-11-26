@@ -13,7 +13,7 @@ class LOGIN extends CORE_MAIN{
    * @return void
    * @access public
    */
-	public function login($_USER,$_PASS){
+	public function start($_USER,$_PASS){
 		//Iniciamos sesion y conectamos a la base de datos
 		$connection = parent::connect();
 		//Extraemos el user y la pass

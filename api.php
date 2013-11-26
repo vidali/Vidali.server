@@ -45,8 +45,8 @@ function getToken($id) {
 }
 
 function doLogin() {
-	$LOGIN = new LOGIN();
-	$sucess= $LOGIN->login($_POST['email'], $_POST['password']);
+	$LOGIN = new LOGIN;
+	$sucess= $LOGIN->start($_POST['email'],$_POST['password']);
 	if($sucess == true){
 		//Recuperamos datos del usuario
 		$USER = new USER($_POST['email']);

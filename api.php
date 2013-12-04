@@ -17,6 +17,7 @@ $app = new \Slim\Slim();
 $app->get('/tokens', 'getTokens');
 $app->get('/tokens/:id', 'getToken');
 $app->post('/login/', 'doLogin');
+$app->post('/lastUpdates', 'getLastUpdates');
 
 $app->run();
  
@@ -28,7 +29,7 @@ function getTokens() {
 		
 		//Generamos token de sesion
 		$TOKEN = new TOKEN();
-		$token = $TOKEN->gen_token("test@test.com", "192.168.1.33");
+		$token = $TOKEN->gen_token("test@test.com", "192.168.1.33", "no");
 		
 		//Añadimos el token al array asociativo que vamos a devolver
 		$datos["token"] = $token;
@@ -54,7 +55,7 @@ function doLogin() {
 		
 		//Generamos token de sesion
 		$TOKEN = new TOKEN();
-		$token = $TOKEN->gen_token($_POST['email'], $_POST['ip']);
+		$token = $TOKEN->gen_token($_POST['email'], $_POST['ip'], $_POST['no_cerrar']);
 		
 		//Añadimos el token al array asociativo que vamos a devolver
 		$datos["token"] = $token;
@@ -62,5 +63,13 @@ function doLogin() {
 		//$auth_session = array("session_auth" => "test");
 		echo json_encode($datos);
 	}
+	
+}
 
+function getLastUpdates() {
+	$UPDATE = new UPDATE();
+		
+	$datos = $UPDATE->getLastUpdates($_POST['token'], $_POST['num']);
+	
+	echo json_encode($datos);
 }

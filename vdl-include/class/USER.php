@@ -124,7 +124,6 @@ class USER extends CORE_MAIN
 									vdl_user.name,
 									vdl_user.location,
 									vdl_user.sex,
-									vdl_user.age,
 									vdl_user.birthdate,
 									vdl_user.description,
 									vdl_user.email,
@@ -147,7 +146,6 @@ class USER extends CORE_MAIN
 			$this->_name = $row["name"];
 			$this->_location = $row["location"];
 			$this->_sex = $row["sex"];
-			$this->_age = $row["age"];
 			$this->_bday = $row["birthdate"];
 			$this->_bio = $row["description"];
 			$this->_email = $row["email"];
@@ -156,6 +154,7 @@ class USER extends CORE_MAIN
 			$this->_prof_groups = $row["n_groups"];
 			$this->_prof_friends = $row["n_contacts"];
 			$this->_prof_visits = $row["n_views"];
+			$this->_avatar_id = $row["avatar_id"];
 		}
 		return true;
 
@@ -171,7 +170,7 @@ class USER extends CORE_MAIN
    * @access public
    */
   public function firstLoad() {
-  	$datos = array("nick" => $this->_nickname, "email" => $this->_email, "name" => $this->_name, "age" => $this->_age, "description" => $this->_bio, "location" => $this->_location);
+  	$datos = array("nick" => $this->_nickname, "name" => $this->_name, "description" => $this->_bio, "location" => $this->_location, "avatar" => $this->_avatar_id);
   	return $datos;
   } // end of member function firstLoad
 		

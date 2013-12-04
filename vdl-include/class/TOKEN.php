@@ -7,12 +7,17 @@
 class TOKEN extends CORE_MAIN{
   
   
-	private function inserToken($token, $email, $ip){
+	private function inserToken($token, $email, $ip, $cierre){
 		 //Creamos la conexion
 		 $connection = parent::connect();
 		 
-		 $query = ("INSERT INTO `vdl_token`(`token`,`email`,`ip`,`expiration_time`)
+		 if ($cierre != "si"){
+		 	$query = ("INSERT INTO `vdl_token`(`token`,`email`,`ip`,`expiration_time`)
 				   VALUES('$token','$email','$ip', NOW() + INTERVAL 1 HOUR)");
+		 }else{
+			 $query = ("INSERT INTO `vdl_token`(`token`,`email`,`ip`,`expiration_time`)
+				   VALUES('$token','$email','$ip', NULL)");
+		 }
 		$result = $connection->query($query);
 		if (!$result) {
 			$message  = 'Invalid query: ' . mysql_error() . "\n";
@@ -88,7 +93,7 @@ class TOKEN extends CORE_MAIN{
 	}
 	  
  
-	public function gen_token($_USER,$ip){
+	public function gen_token($_USER,$ip,$cierre){
 		//Generamos numero aleatorio
 		$randNum = mt_rand();
 		
@@ -97,7 +102,7 @@ class TOKEN extends CORE_MAIN{
 		$token = sha1(md5(trim($seed)));
 		
 		//Guardamos el token
-		$this->inserToken($token, $_USER, $ip);
+		$this->inserToken($token, $_USER, $ip, $cierre);
 		
 		//Devolvemos el token
 		return $token;

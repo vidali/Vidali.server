@@ -105,6 +105,24 @@ class USER extends CORE_MAIN
    */
   protected $_session_id;
 
+	
+	/**
+   * 
+   *
+   * @return void
+   * @access public
+   */
+	public function __construct (){
+		parent::__construct();
+		$connection = parent::connect();
+				return true;
+		$args = func_get_args();
+		$nargs = func_num_args();
+		if ($nargs > 0){
+			self::__construct1($args);
+		}
+	} // end of member function __construct
+
 
   /**
    * 
@@ -114,7 +132,7 @@ class USER extends CORE_MAIN
    * @return void
    * @access public
    */
-	public function __construct ($_USER){
+	public function __construct1 ($_USER){
 		parent::__construct();
 		$connection = parent::connect();
 		$user = htmlspecialchars(trim($_USER));
@@ -158,7 +176,7 @@ class USER extends CORE_MAIN
 		}
 		return true;
 
-	} // end of member function __construct
+	} // end of member function __construct1
 
 	
   /**
@@ -326,6 +344,34 @@ class USER extends CORE_MAIN
   } // end of member function join_group
 
 
+  /**
+   * 
+   *
+   * @return void
+   * @access public
+   */
+  public function set_user( $user ) {
+  	$connection = parent::connect();
+	$query = ("INSERT INTO `vdl_user`(`email`, `nick`, `password`, `name`, `birthdate`,
+									`sex`, `location`, `website`, `description`, `avatar_id`,
+									`n_views`, `n_contacts`, `n_groups`, `session_key`, `session_id`,
+									`privacy_level`, `mail_notify`, `color_theme`)
+				VALUES ('$user[email]','$user[nick]','$user[password]','$user[name]','$user[birthdate]','$user[sex]',
+						'$user[location]','$user[website]','$user[description]','$user[avatar_id]','$user[n_views]',
+						'$user[n_contacts]','$user[n_groups]','$user[session_key]','$user[session_id]',
+						'$user[privacy_level]','$user[mail_notify]','$user[color_theme]')");
+			   
+	$result = $connection->query($query);
+	if($result != 1){
+		$message  = 'Invalid query: ' . mysql_error() . "\n";
+		$message .= 'Whole query: ' . $query;
+		die($message);
+		return FALSE;
+	}
+	else{
+		return TRUE;
+	}
+  } // end of member function set_user
 
 
 

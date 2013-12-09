@@ -56,7 +56,7 @@ function doLogin() {
 		
 		//Generamos token de sesion
 		$TOKEN = new TOKEN();
-		$token = $TOKEN->gen_token($_POST['email'], $_POST['ip'], $_POST['no_cerrar']);
+		$token = $TOKEN->gen_token($_POST['email'], $_POST['ip'], $_POST['remember']);
 		
 		//Añadimos el token al array asociativo que vamos a devolver
 		$datos["token"] = $token;
@@ -78,18 +78,18 @@ function getLastUpdates() {
 function setUser() {
 	//Recuperamos datos del usuario
 	$USER = new USER();
-	//$usuario = array('email' => 'ira@test.com', 'nick' => 'iradiel', 'password' => 'prueba', 'name' => 'Iradiel',
+	/*$usuario = array('email' => 'ira@test.com', 'nick' => 'iradiel', 'password' => 'prueba', 'name' => 'Iradiel',
 					'birthdate' => '30-10-90', 'sex' => 'male', 'location' => 'Orotava', 'website' => 'NULL',
 					'description' => 'helo...', 'avatar_id' => 'pof_def', 'n_views' => '0', 'n_contacts' => '0',
 					'n_groups' => '0', 'session_key' => '0', 'session_id' => '0', 'privacy_level' => 'low',
-					'mail_notify' => '00', 'color_theme' => 'white');
+					'mail_notify' => '00', 'color_theme' => 'white');*/
 	$sucess= $USER->set_user($_POST['user']);
 	//$sucess= $USER->set_user($usuario);
 	if($sucess == true){
 		
 		//Generamos token de sesion
 		$TOKEN = new TOKEN();
-		$token = $TOKEN->gen_token($_POST['user']['email'], $_POST['ip'], $_POST['no_cerrar']);
+		$token = $TOKEN->gen_token($_POST['user']['email'], $_POST['ip'], $_POST['remember']);
 		
 		//Añadimos el token al array asociativo que vamos a devolver
 		$datos["token"] = $token;

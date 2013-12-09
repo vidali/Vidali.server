@@ -79,7 +79,7 @@ class USER extends CORE_MAIN
    * 
    * @access protected
    */
-  protected $_img_prof;
+  protected $_avatar_id;
 
   /**
    * 

@@ -11,7 +11,7 @@ class TOKEN extends CORE_MAIN{
 		 //Creamos la conexion
 		 $connection = parent::connect();
 		 
-		 if ($cierre != "si"){
+		 if ($cierre != "true"){
 		 	$query = ("INSERT INTO `vdl_token`(`token`,`email`,`ip`,`expiration_time`)
 				   VALUES('$token','$email','$ip', NOW() + INTERVAL 1 HOUR)");
 		 }else{
